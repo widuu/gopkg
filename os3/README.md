@@ -1,6 +1,6 @@
 >今天我们继续说os包，OK我们直接来
  
-****(1)os.Mkdir创建单个目录函数原形func Mkdir(name string, perm FileMode) error输入一个目录的名称和目录的权限，我们可以用默认的os.ModePerm然后返回的是一个error的信息，我们看下,也一块复习前边的一点知识
+####(1)os.Mkdir创建单个目录函数原形func Mkdir(name string, perm FileMode) error输入一个目录的名称和目录的权限，我们可以用默认的os.ModePerm然后返回的是一个error的信息，我们看下,也一块复习前边的一点知识
 	
 	import (
 		"fmt"
@@ -25,7 +25,7 @@
 	
 ---
 	
-****(2)os.MkdirAll()函数原形是func MkdirAll(path string, perm FileMode) error输入的是多级目录结构和权限返回的是error的信息
+####(2)os.MkdirAll()函数原形是func MkdirAll(path string, perm FileMode) error输入的是多级目录结构和权限返回的是error的信息
 
 	import (
 		"fmt"
@@ -43,7 +43,7 @@
 
 ---	
 	
-****(3)第三个我们要说的os.NewSyscallError()函数的原形是func NewSyscallError(syscall string, err error) error输入的第一个是系统调用名称，第二个是错误信息的对象，返回是SyscallError的信息
+####(3)第三个我们要说的os.NewSyscallError()函数的原形是func NewSyscallError(syscall string, err error) error输入的第一个是系统调用名称，第二个是错误信息的对象，返回是SyscallError的信息
 
 	import (
 		"errors"
@@ -57,7 +57,7 @@
 	
 ---
 
-****(4)第四个是os.ReadLink()函数原形是func Readlink(name string) (string, error)输入的是链接的名称返回的是目标文件和err的错误返回信息
+####(4)第四个是os.ReadLink()函数原形是func Readlink(name string) (string, error)输入的是链接的名称返回的是目标文件和err的错误返回信息
 
 	import (
 		"fmt"
@@ -71,7 +71,7 @@
 
 ---	
 	
-****(5)第五个函数os.Remove()函数的原形是func Remove(name string) error输入的是目录的名称返回的是error信息
+####(5)第五个函数os.Remove()函数的原形是func Remove(name string) error输入的是目录的名称返回的是error信息
 
 	import (
 		"fmt"
@@ -87,7 +87,7 @@
 
 ---	
 	
-****(6)删除os.RemoveAll()这个函数的原形是func RemoveAll(path string) error和创建一样只不过是删除
+####(6)删除os.RemoveAll()这个函数的原形是func RemoveAll(path string) error和创建一样只不过是删除
 
 	import (
 		"fmt"
