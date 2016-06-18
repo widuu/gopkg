@@ -13,7 +13,7 @@
 	func main() {
 		r, _ := os.Open("test.txt")
 		w, _ := os.Create("write.txt")
-		num, err := io.Copy(w, w)
+		num, err := io.Copy(w, r)
 		if err != nil {
 			fmt.Println(err)
 		}
@@ -112,7 +112,7 @@
 
 ---
 
-#####(5)`func WriteString(w Writer, s string) (n int, err error)`弄完读了，当然带要写了，这个函数主要是向写入目标中写入字符创，返回是写入的字节数还有error错误，主要是权限的错误，其中写入呀！都是writer这个结构就可以写入
+#####(5)`func WriteString(w Writer, s string) (n int, err error)`弄完读了，当然带要写了，这个函数主要是向写入目标中写入字符串，返回是写入的字节数还有error错误，主要是权限的错误，其中写入呀！都是writer这个结构就可以写入
 
 	type Writer interface {
 	    Write(p []byte) (n int, err error)
